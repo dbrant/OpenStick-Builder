@@ -17,34 +17,48 @@ rm -f "/etc/locale.gen"
 apt update -qqy
 apt upgrade -qqy --with-new-pkgs
 apt install -qqy --no-install-recommends \
+    7zip \
+    bash-completion \
+    bc \
+    bridge-utils \
     build-essential \
+    curl \
+    ca-certificates \
     dnsmasq \
+    file \
+    git \
+    hostapd \
+    iptables \
+    iw \
     libconfig11 \
     libconfig-dev \
     libc6-dev \
     linux-libc-dev \
     locales \
+    minicom \
+    mobile-broadband-provider-info \
     modemmanager \
     netcat-traditional \
+    net-tools \
     network-manager \
+    nftables \
     openssh-server \
+    python3 \
     qrtr-tools \
+    rfkill \
     rmtfs \
+    ruby \
+    socat \
     sudo \
     systemd-timesyncd \
+    tor \
     tzdata \
+    unzip \
+    vim \
+    wget \
     wireguard-tools \
     wpasupplicant \
-    bash-completion \
-    curl \
-    ca-certificates \
-    zram-tools \
-    bc \
-    nftables \
-    mobile-broadband-provider-info \
-    iw \
-    rfkill \
-    hostapd
+    zram-tools
 
 # Cleanup in one go
 apt autoremove -qqy
@@ -78,6 +92,8 @@ alias bridge='bridge -color'
 alias free='free -h'
 alias df='df -h'
 alias du='du -hs'
+
+export PS1='\[\e[0;36m\]\u@\h\[\e[m\] \[\e[0;34m\]\W\[\e[m\]\$ '
 
 EOF
 
