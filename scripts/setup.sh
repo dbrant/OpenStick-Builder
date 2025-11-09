@@ -27,6 +27,7 @@ apt install -qqy --no-install-recommends \
     dnsmasq \
     file \
     git \
+    gpiod \
     hostapd \
     iptables \
     iw \
